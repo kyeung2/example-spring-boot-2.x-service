@@ -17,15 +17,12 @@ A simple service with one endpoint GET /books. This is serviced by a Spring MVC 
 * event-loop execution model
     - asynchronous and non-blocking
     - thread pool can be smaller than Spring Boot 1.5.X
+    - see previous commits for the migration and how the threading model changes
 * Support for **Reactive Streams** API (Spring implementation: **Project Reactor** )
-* have choice of migrating from Spring Boot 1.5.X incrementally
-    - do nothing at all and continue to use the blocking stack, Spring MVC Spring Data
-    - migrate the Reactive Spring Data only. i.e. continue to use controllers but return a Flux or Mono.
 * Reactive stack
     - **Spring WebFlux** (non-blocking reactive alternative web framework to Spring MVC.)
     - **Reactive Spring Data** (where the DB supports e.g. spring-boot-starter-data-mongodb-reactive)
     - Netty, Servlet 3.1 (async runtime)
-
 
 ## Resources
 
