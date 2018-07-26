@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
 import java.util.List;
 
@@ -21,9 +22,11 @@ public class ApiController {
     private final BookRepository bookRepository;
 
     @GetMapping(value = "/books", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<Book> index() {
+    public Flux<Book> index() {
 
-        return bookRepository.findAll();
+        return bookRepository
+                .findAll()
+                .log();
     }
 
 }
