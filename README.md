@@ -9,12 +9,14 @@ A simple service with one endpoint GET /books. This is serviced by a Spring MVC 
 `>curl -X GET http://localhost:8080/books`
 
 
+
 ![springMvc_reactiveSpringData_handling.png](springMvc_reactiveSpringData_handling.png)
 _fig.1 Spring MVC + Reactive Spring Data_ : mixed model
 
 
 ![webFlux_reactiveSpringData_handling.png](webFlux_reactiveSpringData_handling.png)
 _fig.2 webFlux + Reactive Spring Data_ : fully reactive
+
 
 ##  Spring Boot 2.X features
 
@@ -39,3 +41,9 @@ _fig.2 webFlux + Reactive Spring Data_ : fully reactive
 ## TODO
 
 not using "routes" functional API in Spring Boot 2.x. similar to NodeJs and Akka style. Not mandatory for this example. 
+=======
+* Support for **Reactive Streams** API (Spring implementation: **Project Reactor** )
+* Reactive stack
+    - **Spring WebFlux** (non-blocking reactive alternative web framework to Spring MVC.)
+    - **Reactive Spring Data** (where the DB supports e.g. spring-boot-starter-data-mongodb-reactive)
+    - Netty, Servlet 3.1 (async runtime)
