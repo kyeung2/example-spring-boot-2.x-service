@@ -1,21 +1,18 @@
 # example-spring-boot-2.x-service
 creating a simple Spring-boot 2.X service to compare with different frameworks
 
-## The example service
-A simple service with one endpoint GET /books. This is serviced by a Spring MVC controller, which passes the call to a Spring Data Mongo Repository for the list of Books. 
+A simple service with one endpoint GET /books. 
 
-`>curl -X GET http://localhost:8080/books`
+`curl -X GET http://localhost:8080/books`
 
+### stack
+- Spring Boot 2.X
+- Spring WebFlux
+- Reactive Spring Data - Mongo
+- Embedded MongoDB 
+- Lombok
 
-![springMvc_reactiveSpringData_handling.png](springMvc_reactiveSpringData_handling.png)
-_fig.1 Spring MVC + Reactive Spring Data_ : mixed model
-
-
-![webFlux_reactiveSpringData_handling.png](webFlux_reactiveSpringData_handling.png)
-_fig.2 webFlux + Reactive Spring Data_ : fully reactive
-
-
-##  Spring Boot 2.X features
+### Spring Boot 2.X features
 * event-loop execution model:
     - asynchronous and non-blocking
     - thread pool can be smaller than Spring Boot 1.5.X
@@ -33,5 +30,14 @@ _fig.2 webFlux + Reactive Spring Data_ : fully reactive
     - JPA currently only blocking
 
 
-## TODO
+![springMvc_reactiveSpringData_handling.png](springMvc_reactiveSpringData_handling.png)
+_fig.1 Spring MVC + Reactive Spring Data_ : mixed model
+
+
+![webFlux_reactiveSpringData_handling.png](webFlux_reactiveSpringData_handling.png)
+_fig.2 webFlux + Reactive Spring Data_ : fully reactive
+
+
+
+### TODO
 not using "routes" functional API in Spring Boot 2.x. similar to NodeJs and Akka style. Not mandatory for this example. 
