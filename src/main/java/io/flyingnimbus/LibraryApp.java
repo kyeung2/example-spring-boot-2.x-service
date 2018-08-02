@@ -1,30 +1,22 @@
 package io.flyingnimbus;
 
 import io.flyingnimbus.domain.Book;
-import org.springframework.beans.factory.InitializingBean;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.data.mongodb.core.CollectionOptions;
 import org.springframework.data.mongodb.core.MongoOperations;
-
-import java.util.Arrays;
-import java.util.Map;
-import java.util.Properties;
 
 /**
  * @author Kye
  */
 @SpringBootApplication
-public class Application   {
+public class LibraryApp {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(LibraryApp.class, args);
     }
 
     @Bean
