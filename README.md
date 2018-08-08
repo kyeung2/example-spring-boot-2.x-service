@@ -28,13 +28,14 @@ A simple service with one endpoint GET /books.
     - motivation is scalability
     - relational DBs currently cannot be reactive
     - JPA currently only blocking
+    - interesting reading on [applicability of webFlux or MVC](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#webflux-framework-choice), many situations precludes using it.
 
 
 ![springMvc_reactiveSpringData_handling.png](springMvc_reactiveSpringData_handling.png)
 _fig.1 Spring MVC + Reactive Spring Data_ : mixed model
 
-![webFlux_reactiveSpringData_handling.png](webFlux_reactiveSpringData_handling.png)
-_fig.2 webFlux + Reactive Spring Data_ : fully reactive
+![webFlux_controllers_reactiveSpringData_handling.png](webFlux_controllers_reactiveSpringData_handling.png)
+_fig.2 webFlux (controllers API) + Reactive Spring Data_ : fully reactive
 
 
 **TODO**
