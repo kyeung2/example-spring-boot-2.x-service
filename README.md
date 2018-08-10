@@ -1,7 +1,7 @@
 # example-spring-boot-2.x-service
-creating a simple Spring-boot 2.X service to compare with different frameworks
+A simple Spring-boot 2.X service to compare with different frameworks
 
-A simple service with one endpoint GET /books. 
+A single endpoint which retrieves data from a Mongo DB
 
 `curl -X GET http://localhost:8080/books`
 
@@ -9,9 +9,6 @@ A simple service with one endpoint GET /books.
 - Spring Boot 2.X
 - Spring WebFlux
 - Reactive Spring Data - Mongo
-- Embedded MongoDB
-- Lombok
-
 
 ### Setup Mongo
 
@@ -20,7 +17,6 @@ You can use the embedded MongoDB buy uncommenting **de.flapdoodle.embed** the de
 You can also easily setup a local Mongo DB running from a local [Docker](https://www.docker.com/docker-mac) image. Pull the [Mongo image](https://hub.docker.com/_/mongo/) and run remembering to use the **-p** option to the port. e.g:
 
 `docker run -p 27017:27017 --name some-mongo mongo`
-
 
 ### Spring Boot 2.X features
 * event-loop execution model:
@@ -39,7 +35,6 @@ You can also easily setup a local Mongo DB running from a local [Docker](https:/
     - relational DBs currently cannot be reactive
     - JPA currently only blocking
     - interesting reading on [applicability of webFlux or MVC](https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html#webflux-framework-choice), many situations precludes using it.
-
 
 ![springMvc_reactiveSpringData_handling.png](springMvc_reactiveSpringData_handling.png)
 _fig.1 Spring MVC + Reactive Spring Data_ : mixed model
