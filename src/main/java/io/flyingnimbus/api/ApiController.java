@@ -20,9 +20,7 @@ public class ApiController {
     @GetMapping(value = "/books", produces = MediaType.APPLICATION_JSON_VALUE)
     public Flux<Book> index() {
 
-        return bookRepository
-                .findAll()
-                .log();
+        return bookRepository.findAll().log();
     }
 
 }
