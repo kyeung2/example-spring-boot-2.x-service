@@ -1,7 +1,7 @@
 # example-spring-boot-2.x-service
 A simple Spring-boot 2.X service to compare with different frameworks
 
-A single endpoint which retrieves data from a Mongo DB
+A single endpoint which retrieves data from a Mongo
 
 `curl -X GET http://localhost:8080/books`
 
@@ -12,9 +12,9 @@ A single endpoint which retrieves data from a Mongo DB
 
 ### Setup Mongo
 
-You can use the embedded MongoDB buy uncommenting **de.flapdoodle.embed** the dependency in the pom.xml.
+You can use the embedded Mongo buy uncommenting **de.flapdoodle.embed** the dependency in the pom.xml.
 
-You can also easily setup a local Mongo DB running from a local [Docker](https://www.docker.com/docker-mac) image. Pull the [Mongo image](https://hub.docker.com/_/mongo/) and run remembering to use the **-p** option to the port. e.g:
+You can also easily setup a local Mongo running from a local [Docker](https://www.docker.com/docker-mac) image. Pull the [Mongo image](https://hub.docker.com/_/mongo/) and run remembering to use the **-p** option to the port. e.g:
 
 `docker run -p 27017:27017 --name some-mongo mongo`
 
