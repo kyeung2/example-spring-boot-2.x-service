@@ -1,5 +1,7 @@
 # example-spring-boot-2.x-service
-A simple Spring-boot 2.X service to compare with different frameworks
+A simple Spring-boot 2.X service to compare with various backend technologies.
+
+Blog post: [comparing execution model of various backend technologies](https://ioflyingnimbus.blogspot.com/2018/08/comparing-execution-model-of-various.html)
 
 A single endpoint which retrieves data from a Mongo
 
